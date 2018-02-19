@@ -24,23 +24,15 @@ x_arg = '//span[contains(@title,' + target + ')]'
 group_title = wait.until(EC.presence_of_element_located((
 	By.XPATH, x_arg)))
 group_title.click()
-#inp_xpath = '//div[@class="input"][@dir="auto"][@data-tab="1"]'
-#input_box = wait.until(EC.presence_of_element_located((
-#	By.XPATH, inp_xpath)))
 
 
-version = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')[0]
+message = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')[0]
 
 
-#message = divs = driver.find_element_by_class_name('pluggable-input-body copyable-text selectable-text')
-version.send_keys(string)
+message.send_keys(string)
 
 sendbutton = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/button')[0]
 sendbutton.click()
-#for i in range(100):
-#  print(string)
-#  input_box.send_keys(string + Keys.ENTER)
-#  time.sleep(1)
 
 driver.close()
 
