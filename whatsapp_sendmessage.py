@@ -31,7 +31,7 @@ message = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/di
 
 message.send_keys(string)
 
-sendbutton = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/button')[0]
+sendbutton = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button')[0]
 sendbutton.click()
 
 driver.close()
